@@ -1,111 +1,104 @@
-Database Setup Scripts
-This repository contains SQL scripts to create and populate two sample databases:
+# Database Setup Scripts
 
-PUBS Database - A publishing industry database
+This repository contains SQL scripts to create and populate two sample databases for learning, testing, and demonstration purposes.
 
-Employee/Department Database - A simple organizational structure database
+## Databases Provided
+
+### 1. PUBS Database
+A comprehensive publishing industry database, commonly used as a sample schema for SQL learning.
+
+**Entities:**
+- **Authors:** Details of book authors
+- **Publishers:** Publishing companies and their locations
+- **Book Titles:** Book information and publishing details
+- **Author-Title Relationships:** Links between authors and their authored titles
+- **Book Stores:** Store locations and information
+
+**Tables:**
+- `authors`
+- `publishers`
+- `titleauthor`
+- `titles`
+- `stores`
+
+### 2. Employee/Department Database
+A simple organizational database to demonstrate employee and department structures.
+
+**Entities:**
+- **Employees:** Employee records, including salaries
+- **Departments:** Department information
+
+**Tables:**
+- `emp` (employees)
+- `dept` (departments)
+
+---
+
+## Script Files
 
 Scripts are provided for both Microsoft SQL Server and Oracle Database systems.
 
-Database Descriptions
-1. PUBS Database
-A comprehensive publishing database containing information about:
+### Microsoft SQL Server Scripts
 
-Authors and their details
+- **PUBS Database:**  
+  `create_PUBS_microsoft_new.txt`  
+  - Creates and populates all PUBS database tables  
+  - Uses SQL Server-specific syntax (`getdate()`, `GO` batch separators)
 
-Publishers and their locations
+- **Employee/Department Database:**  
+  `setup1_emp_dept_Microsoft.txt.txt`  
+  - Creates and populates `emp` and `dept` tables  
+  - Uses T-SQL syntax
 
-Book titles with publishing details
+### Oracle Database Scripts
 
-Author-title relationships
+- **PUBS Database:**  
+  `createPUBS_Oracle_new.txt`  
+  - Creates and populates all PUBS database tables  
+  - Uses Oracle syntax (`SYSDATE`, `NUMBER` datatype, `;` statement terminators)
 
-Book stores and their locations
+- **Employee/Department Database:**  
+  `setup1_emp_dept_ORACLE.txt.txt`  
+  - Creates and populates `emp` and `dept` tables  
+  - Uses PL/SQL syntax with explicit `COMMIT` statements
 
-Tables:
+---
 
-authors
+## Usage Instructions
 
-publishers
+### For Microsoft SQL Server
 
-titleauthor
+1. To set up the PUBS database, run:  
+   `create_PUBS_microsoft_new.txt`
 
-titles
+2. To set up the Employee/Department database, run:  
+   `setup1_emp_dept_Microsoft.txt.txt`
 
-stores
+### For Oracle Database
 
-2. Employee/Department Database
-A simple organizational database showing:
+1. To set up the PUBS database, run:  
+   `createPUBS_Oracle_new.txt`
 
-Employees and their salaries
+2. To set up the Employee/Department database, run:  
+   `setup1_emp_dept_ORACLE.txt.txt`
 
-Department information
+---
 
-Tables:
+## Notes
 
-emp (employees)
+- The PUBS database contains realistic publishing industry data.
+- The employee/department database is intentionally simple for demonstration and learning.
+- All scripts include both table creation and sample data insertion.
+- **Oracle scripts** use explicit `COMMIT` statements for transaction control.
+- **Microsoft SQL Server scripts** use `GO` batch separators where needed.
 
-dept (departments)
+---
 
-Script Files
-Microsoft SQL Server Scripts
-PUBS Database
-File: create_PUBS_microsoft_new.txt
+## Ideal Uses
 
-Creates and populates all PUBS database tables
+- Learning and practicing SQL queries
+- Practicing database joins
+- Testing application database connectivity
+- Demonstrating database concepts
 
-Uses SQL Server-specific syntax (getdate(), go commands)
-
-Employee/Department Database
-File: setup1_emp_dept_Microsoft.txt.txt
-
-Creates and populates emp and dept tables
-
-Uses T-SQL syntax
-
-Oracle Database Scripts
-PUBS Database
-File: createPUBS_Oracle_new.txt
-
-Creates and populates all PUBS database tables
-
-Uses Oracle-specific syntax (SYSDATE, NUMBER datatype, semicolon terminators)
-
-Employee/Department Database
-File: setup1_emp_dept_ORACLE.txt.txt
-
-Creates and populates emp and dept tables
-
-Uses PL/SQL syntax with explicit commit statements
-
-Usage Instructions
-For Microsoft SQL Server
-Execute create_PUBS_microsoft_new.txt to create PUBS database
-
-Execute setup1_emp_dept_Microsoft.txt.txt to create employee/department database
-
-For Oracle Database
-Execute createPUBS_Oracle_new.txt to create PUBS database
-
-Execute setup1_emp_dept_ORACLE.txt.txt to create employee/department database
-
-Notes
-The PUBS database contains realistic publishing industry data
-
-The employee/department database is intentionally simple for demonstration purposes
-
-Scripts include both table creation and sample data insertion
-
-Oracle scripts use explicit commit statements for transaction control
-
-Microsoft scripts use go batch separators where needed
-
-These databases are ideal for:
-
-Learning SQL queries
-
-Practicing database joins
-
-Testing application database connectivity
-
-Demonstrating database concepts
-
+---
